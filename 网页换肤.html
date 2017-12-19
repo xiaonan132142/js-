@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网页换肤</title>
+    <link rel="stylesheet" href="css/red.css">
+</head>
+<body>
+<div class="skin" id="skin">
+    <span id="red" class="block-span" style="background:#f00"></span>
+    <span id="green" class="block-span" style="background: #0f0"></span>
+    <span id="black" class="block-span" style="background: #000"></span>
+</div>
+
+
+<div class="block-div block">
+
+</div>
+</body>
+<style>
+    .block-span{
+        display: inline-block;
+        width:20px;
+        height:20px;
+    }
+    .block-div{
+        width:100px;
+        height:100px;
+        border:1px solid #000;
+    }
+</style>
+<script>
+    var oskin=document.getElementById('skin').getElementsByTagName("span")
+    var olink=document.getElementsByTagName("link")[0]
+    for(var i=0;i<skin.length;i++){
+        oskin[i].onclick=function () {
+            for(var j=0;j<olink.length;j++){
+                olink["href"]=this.id+'.css'
+            }
+        }
+    }
+</script>
+</html>

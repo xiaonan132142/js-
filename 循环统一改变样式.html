@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .box-item{
+        width: 100px;
+        height:100px;
+        background:#000;
+        margin-right:10px;
+        display: inline-block;
+    }
+</style>
+<script>
+    var box=document.getElementsByTagName('p');
+    function change() {
+        for(i=0;i<box.length;i++)box[i].style.background="red"
+
+    }
+</script>
+<body>
+    <div class="box" id="box">
+        <p class="box-item"></p>
+        <p class="box-item"></p>
+        <p class="box-item"></p>
+    </div>
+    <button onclick="change()">循环改变颜色</button>
+</body>
+</html>

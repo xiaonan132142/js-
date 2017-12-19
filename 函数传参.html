@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+
+<script>
+    var popSome=function popSome(a,b) {
+        alert(a)
+        alert(b)
+    }
+    var oInput=document.getElementsByTagName('input');
+    function btn () {
+        popSome(oInput[0],oInput[1])
+    }
+    
+</script>
+<body>
+<p><input type="text" value="北京市"></p>
+<p><input type="text" value="朝阳区"></p>
+<p><button onclick="btn()">传参</button></p>
+</body>
+</html>
