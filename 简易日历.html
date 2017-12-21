@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .box{
+        width:300px;
+    }
+    .item{
+        width:50px;
+        height:50px;
+        background: #000;
+        font-size:14px;
+        color:#fff;
+        text-align:center;
+        display: inline-block;
+        margin-top:10px;
+    }
+    .hover{
+        width:50px;
+        height:50px;
+        font-size:14px;
+        color:#fff;
+        text-align:center;
+        display: inline-block;
+        margin-top:10px;
+        background:#f00;
+    }
+</style>
+<script>
+   window.onload=function () {
+       var box=document.getElementById('box').getElementsByTagName('li');
+       var nav= document.getElementById('showNav');
+       var oArray = [
+           "元旦：1月1日至3日放假三天。",
+           "春节：2月2日至8日放假7天。",
+           "妇女节：3月8日妇女节，与我无关。",
+           "清明节：4月3日至5日放假3天",
+           "劳动节：4月30日至5月2日放假3天。",
+           "端午节：6月4日至6日放假3天。",
+           "小暑：7月7日小暑。不放假。",
+           "七夕节：8月6日七夕节。不放假。",
+           "中秋节：9月10日至12日放假3天。",
+           "国庆节：10月1日至7日放假7天。",
+           "立冬：11月8日立冬。不放假。",
+           "艾滋病日:12月1日<br />废除奴隶制国际日:12月2日。"
+       ];
+       for(var i=0;i<box.length;i++){
+           box[i].index=i;
+           box[i].onmouseover=function () {
+               for(var n=0;n<box.length;n++){
+                   box[n].className='';
+                   box[this.index].className='hover'
+                   nav.innerHTML=oArray[this.index]
+               }
+           }
+       }
+   }
+</script>
+<body>
+    <div class="box">
+        <ul id="box">
+            <li class="item" v-for="item in items">
+                <p>1</p>
+            </li>
+            <li class="item" v-for="item in items">
+                <p>2</p>
+            </li>
+            <li class="item" v-for="item in items">
+                <p>3</p>
+            </li>
+            <li class="item" v-for="item in items">
+                <p>4</p>
+            </li>
+            <li class="item" v-for="item in items">
+                <p>5</p>
+            </li>
+            <li class="item" v-for="item in items">
+                <p>6</p>
+            </li>
+            <li class="item" v-for="item in items">
+                <p>7</p>
+            </li>
+            <li class="item" v-for="item in items">
+                <p>8</p>
+            </li>
+            <li class="item" v-for="item in items">
+                <p>9</p>
+            </li>
+            <li class="item" v-for="item in items">
+                <p>10</p>
+            </li>
+            <li class="item" v-for="item in items">
+                <p>11</p>
+            </li>
+            <li class="item" v-for="item in items">
+                <p>12</p>
+            </li>
+        </ul>
+    </div>
+    <div id="showNav">
+
+    </div>
+</body>
+</html>
